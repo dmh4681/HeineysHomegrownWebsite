@@ -1,0 +1,92 @@
+$orange: rgba(244, 96, 54, 1);
+$blue: rgba(00, 75, 212, 1);
+$lightblue: #459AD4;
+$gray: rgba(65, 71, 112, 1);
+$purple: rgba(55, 34, 72, 1);
+$dark: rgba(23, 17, 35, 1);
+$width: 200px;
+
+body {
+	background-color: $blue;
+	font-family: "Helvetica", Times, Serif;
+}
+
+h1 {
+	font-size: 4em;
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+.nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+    background-color: $lightblue;
+	border-radius: $width/25;
+}
+
+
+.nav li {
+    float: left;
+	padding: 2px;
+}
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+	font-size: 2em;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    background-color: $orange;
+	border-radius: $width/30;
+}
+
+.nav .active {
+	background-color: $orange;
+    color: white;
+	border-radius: $width/25;
+}
+
+.sidenav {
+	background-color: $orange;
+	border-radius: $width/30;
+	color: white;
+	position: fixed;
+	right: 10px;
+	width: 30%;
+	height: 100%;
+}
+
+.sidenav li {
+	font-size: 1.25em;
+}
+
+.sidenav h3 {
+	font-size: 2em;
+	text-align: center;
+}
+
+.video {
+	position: relative;
+	float: left;
+	width: 70%;
+	height: 600px;
+	background-color: $purple;
+	border-radius: $width/30;
+}
+
+.video iframe {
+	margin-left: 275px;
+}
+
+.video h3 {
+	text-align: center;
+	color: white;
+	font-size: 2.5em;
+}
