@@ -1,6 +1,6 @@
 $orange: rgba(244, 96, 54, 1);
 $blue: rgba(00, 75, 212, 1);
-$lightblue: #459AD4;
+$lightblue: rgba(45, 154, 212, 1);
 $gray: rgba(65, 71, 112, 1);
 $purple: rgba(55, 34, 72, 1);
 $dark: rgba(23, 17, 35, 1);
@@ -8,16 +8,47 @@ $width: 200px;
 
 body {
 	background-color: $blue;
-	font-family: "Helvetica", Times, Serif;
+	font-family: "Futura", Sans-Serif;
 }
 
-h1 {
-	font-size: 4em;
+p {
+	font-size: 1.25em;
+}
+
+.header h1 {
+	font-size: 5em;
 	color: white;
-	padding: 10px;
 	text-align: center;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    padding: 50px 30px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
+.deepshadow {
+    color: #e0dfdc;
+    letter-spacing: .1em;
+    text-shadow: 
+      0 -1px 0 #fff, 
+      0 1px 0 #2e2e2e, 
+      0 2px 0 #2c2c2c, 
+      0 3px 0 #2a2a2a, 
+      0 4px 0 #282828, 
+      0 5px 0 #262626, 
+      0 6px 0 #242424, 
+      0 7px 0 #222, 
+      0 8px 0 #202020, 
+      0 9px 0 #1e1e1e, 
+      0 10px 0 #1c1c1c, 
+      0 11px 0 #1a1a1a, 
+      0 12px 0 #181818, 
+      0 13px 0 #161616, 
+      0 14px 0 #141414, 
+      0 15px 0 #121212, 
+      0 22px 30px rgba(0, 0, 0, 0.9);
+  }
+
+  
 .nav ul {
 	list-style-type: none;
 	margin: 0;
@@ -38,7 +69,7 @@ h1 {
     color: white;
     text-align: center;
 	font-size: 2em;
-    padding: 14px 16px;
+    padding: 20px;
     text-decoration: none;
 }
 
@@ -57,19 +88,30 @@ h1 {
 	background-color: $orange;
 	border-radius: $width/30;
 	color: white;
-	position: fixed;
+	position: absolute;
 	right: 10px;
 	width: 30%;
 	height: 100%;
 }
 
+.sidenav ul {
+	list-style-type: decimal;
+}
+
 .sidenav li {
-	font-size: 1.25em;
+	padding: $width/20;
+	font-size: 1.5em;
 }
 
 .sidenav h3 {
-	font-size: 2em;
+	font-size: 2.5em;
 	text-align: center;
+}
+
+.sidenav li a {
+	text-decoration: none;
+	color: white;
+
 }
 
 .video {
@@ -89,4 +131,146 @@ h1 {
 	text-align: center;
 	color: white;
 	font-size: 2.5em;
+}
+
+.quote {
+	position: relative;
+	float: left;
+	width: 70%;
+	height: $width;
+	background-color: $lightblue;
+	border-radius: $width/30;
+
+}
+
+.quote h3 {
+	color: white;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+.quote p {
+	color: white;
+	text-align: center;
+	font-family: Cursive;
+	font-size: 1.5em;
+	padding: 5px;
+}
+
+.blog {
+	position: relative;
+	float: left;
+	width: 70%;
+	height: 100%;
+	background-color: $blue;
+	border-radius: $width/30;
+	color: white;
+}
+
+.blog h2 {
+	font-size: 2.5em;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.blog p {
+	font-size: 1.5em;
+	padding-left: $width/12;
+}
+
+#contact-table {
+	color: white;
+	width: 100%;
+	font-size: 1.75em;
+	text-align: center;
+}
+
+#contact-table table {
+	border: 1px solid white;
+}
+
+#contact-table caption {
+	font-size: 2.5em;
+	text-decoration: underline;
+}
+
+
+#contact-table td {
+	border-bottom: 1px solid white;
+	padding: $width/10;
+}
+
+#contact-table img {
+	width: $width/4;
+	height: $width/4;
+}
+
+#contact-table a {
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	font-size: 2em;
+	padding-right: $width/2;
+}
+
+.emailform {
+	border-radius: 5px;
+    background-color: $orange;
+    padding: 20px;
+	font-size: 1.5em;
+}
+
+.emailform input[type=text], select {
+	width: 100%;
+    padding: 12px 20px;
+	font-size: 1.5em;
+    display: inline-block;
+    border-radius: 5px;
+	box-sizing: border-box;
+
+}
+
+.emailform input[type=text]:focus {
+    background-color: $lightblue;
+	border: 3px solid $dark;
+}
+
+.emailform textarea {
+    width: 100%;
+    height: 250px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5em;
+    resize: none;
+}
+
+.emailform textarea:focus {
+    background-color: $lightblue;
+	border: 3px solid $dark;	
+}
+
+.emailform input[type=submit] {
+	width: 100%;
+    background-color: $purple;
+    color: white;
+	font-size: 2em;
+	text-align: center;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.emailform input[type=submit]:hover {
+	border: 3px solid $dark;
+	background-color: green;
+}
+
+.emailform label {
+	color: white;
+	font-size: 2em;
+	padding: 10px 15px;
 }
