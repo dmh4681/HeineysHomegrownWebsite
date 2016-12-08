@@ -6,9 +6,75 @@
  </head>
  
  <body>
-  <ul>
-   <li><a href="mainpage.html">Home / Blog </a> </li>
-   <li><a href="contact.html"> Contact Information </a> </li>
+ 
+  <div class="header"> 
+	<h1 class="deepshadow">Heiney's Homegrown Health</h1>
+  </div>
+  
+  <div class="nav">
+   <ul>
+   <li><a href="index.html">Home / Blog </a> </li>
+   <li><a class="active" href="contact.html"> Contact Information </a> </li>
   </ul>
+  </div>
+  
+  <table id="contact-table">
+  <caption> Contact Information </caption>
+  
+  <tr>
+	<td> Dylan Heiney</td>
+  </tr>
+  
+  <tr>
+	<td> National Academy of Sports Medicine Certified Personal Trainer (NASM-CPT) </td>
+  </tr>
+  
+  <tr>
+	<td> Email: dylan.heineytrainer@gmail.com</td>
+  </tr>
+  
+  <tr>
+	<td> Phone: 314.596.8623 (cell) </td>
+  </tr>
+  
+  <tr>
+	<td> 
+		<a href="https://www.facebook.com/dylan.heiney"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">Facebook</a>
+		<a href="https://twitter.com/dheineytrainer"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">Twitter</a>
+		<a href="https://www.instagram.com/dheineytrainer/"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">Instragram</a>
+	</td>
+  </tr>
+  
+  </table>
+ 
+ 
+ <div class="emailform">
+	
+	<form action="#">
+	
+		<label for="name">Full Name</label>
+		<input type="text" id="name" name="fullname">
+		
+		<label for="email_from">Email Address</label>
+		<input type="text" id="email" name="email_from">
+		
+		<label for="reason">Reason for email</label>
+		<select id="reason" name="reason">
+			<option value="training">Interested in Personal Training</option>
+			<option value="price">Question about specific packages / pricing</option>
+			<option value="qa">Question about fitness / health and wellness</option>
+			<option value="other">Other</option>
+		</select>
+		
+		<label for="message">Message to Dylan Heiney</label>
+		<textarea id="message" name="email_message">Write your message here ...</textarea>
+
+		
+		<input type="submit" value="Send Email">
+	</form>
+	
+ </div>
+  
+  
  </body>
 </html>
