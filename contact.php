@@ -71,7 +71,7 @@
   <div class="nav">
    <ul>
    <li><a href="index.html">Home / Blog </a> </li>
-   <li><a class="active" href="contact.html"> Contact Information </a> </li>
+   <li><a class="active" href="contact.php"> Contact Information </a> </li>
   </ul>
   </div>
   </div>
