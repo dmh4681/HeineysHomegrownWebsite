@@ -6,66 +6,7 @@
  
  <body>
  
- <?php
- 
-	if(isset($_POST['submit']))
-	{
-		$name = $_POST['name'];
-		$visitor_email = $_POST['email'];
-		$message = $_POST['message'];
-
-		//Validate first
-		if(empty($name)||empty($visitor_email)) 
-		{
-			echo "Name and email are mandatory!";
-			exit;
-		}
-
-		if(IsInjected($visitor_email))
-		{
-			echo "Bad email value!";
-			exit;
-		}
-
-		$email_from = 'dylan@heineyhomegrownhealth.com';//<== update the email address
-		$email_subject = "New Form submission";
-		$email_body = "You have received a new message from the user $name.\n".
-			"Here is the message:\n $message";
-    
-		$to = "dylan@heineyhomegrownhealth.com";//<== update the email address
-		$headers = "From: $email_from \r\n";
-		$headers .= "Reply-To: $visitor_email \r\n";
-		//Send the email!
-		mail($to,$email_subject,$email_body,$headers);
-		//done. redirect to thank-you page.
-		//header('Location: thank-you.html');
-
-		// Function to validate against any email injection attempts
-		function IsInjected($str)
-		{
-		$injections = array('(\n+)',
-					'(\r+)',
-					'(\t+)',
-					'(%0A+)',
-					'(%0D+)',
-					'(%08+)',
-					'(%09+)'
-					);
-		$inject = join('|', $injections);
-		$inject = "/$inject/i";
-		if(preg_match($inject,$str))
-			{
-			return true;
-		}
-		else
-			{
-			return false;
-		}
-		}
-	}
-	else
-	{
-		echo "<div class="header"> 
+ <div class="header"> 
 	<h1 class="deepshadow">Heiney Homegrown Health</h1>
  
   <div class="nav">
@@ -117,40 +58,95 @@
   is currently not functional but I am working on it!)</p>
  </div>
  
-
  <div class="emailform">
-	
-	<form method="post" action="contact.php">
-	
-		<label for="name">Full Name</label>
-		<input type="text" name="name">
-		
-		<label for="email_from">Email Address</label>
-		<input type="text" name="email">
-		
-		<label for="reason">Reason for email</label>
-		<select name="reason">
-			<option value="training">Interested in Personal Training</option>
-			<option value="price">Question about specific packages / pricing</option>
-			<option value="qa">General question about fitness, health, and wellness</option>
-			<option value="other">Other</option>
-		</select>
-		
-		<label for="message">Message to Dylan Heiney</label>
-		<textarea name="message">Write your message here ...</textarea>
-
-		
-		<input type="submit" name="submit" value="Send Email">
-	</form>
-	
- </div>
- </div>
- </div>"";
-	}
  
+ <?php
+ 
+	if(isset($_POST['submit']))
+	{
+		$name = $_POST['name'];
+		$visitor_email = $_POST['email'];
+		$message = $_POST['message'];
+
+		//Validate first
+		if(empty($name)||empty($visitor_email)) 
+		{
+			echo "Name and email are mandatory!";
+			exit;
+		}
+
+		if(IsInjected($visitor_email))
+		{
+			echo "Bad email value!";
+			exit;
+		}
+
+		$email_from = 'dylan@heineyhomegrownhealth.com';//<== update the email address
+		$email_subject = "New Form submission";
+		$email_body = "Here is the message:\n $message";
+    
+		$to = "dylan@heineyhomegrownhealth.com";//<== update the email address
+		$headers = "From: $email_from \r\n";
+		$headers .= "Reply-To: $visitor_email \r\n";
+		//Send the email!
+		mail($to,$email_subject,$email_body,$headers);
+		//done. redirect to thank-you page.
+		//header('Location: thank-you.html');
+
+		// Function to validate against any email injection attempts
+		function IsInjected($str)
+		{
+		$injections = array('(\n+)',
+					'(\r+)',
+					'(\t+)',
+					'(%0A+)',
+					'(%0D+)',
+					'(%08+)',
+					'(%09+)'
+					);
+		$inject = join('|', $injections);
+		$inject = "/$inject/i";
+		if(preg_match($inject,$str))
+			{
+			return true;
+			}
+		else
+			{
+			return false;
+			}
+		}
+	}
+	else
+	{
+		echo "<form method="post" action="contact.php">
+			
+				<label for="name">Full Name</label>
+				<input type="text" name="name">
+				
+				<label for="email_from">Email Address</label>
+				<input type="text" name="email">
+				
+				<label for="reason">Reason for email</label>
+				<select name="reason">
+					<option value="training">Interested in Personal Training</option>
+					<option value="price">Question about specific packages / pricing</option>
+					<option value="qa">General question about fitness, health, and wellness</option>
+					<option value="other">Other</option>
+				</select>
+				
+				<label for="message">Message to Dylan Heiney</label>
+				<textarea name="message">Write your message here ...</textarea>
+
+				
+				<input type="submit" name="submit" value="Send Email">
+				</form>";
+	}
+	
+ ?>
+</div>  
+</div>
+</div>
   
   
-  
-  ?>
  </body>
 </html>
