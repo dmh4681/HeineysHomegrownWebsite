@@ -1,3 +1,11 @@
+<html>
+
+<head>
+  <title>Contact Information</title>
+  <link type="text/css" rel="stylesheet" href="main.css" />
+</head>
+
+<body>
 <?php
 if(!isset($_POST['submit']))
 {
@@ -59,3 +67,5 @@ function IsInjected($str)
 }
    
 ?> 
+</body>
+</html>
