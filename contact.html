@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <html>
  <head>
   <title>Contact Information</title>
@@ -8,15 +7,18 @@
  <body>
  
   <div class="header"> 
-	<h1 class="deepshadow">Heiney's Homegrown Health</h1>
-  </div>
-  
+	<h1 class="deepshadow">Heiney Homegrown Health</h1>
+ 
   <div class="nav">
    <ul>
    <li><a href="index.html">Home / Blog </a> </li>
    <li><a class="active" href="contact.html"> Contact Information </a> </li>
   </ul>
   </div>
+  </div>
+  
+ <div class="content">
+ <div id="scrollable">
   
   <table id="contact-table">
   <caption> Contact Information </caption>
@@ -46,33 +48,43 @@
   </tr>
   
   </table>
+  
+ <div class="contact-message"> 
+  <p>Currently I have very little to show on my Twitter and Instagram accounts (I made them both recently),
+  so I apologize for that. I mainly intend to use this personal website / blog to communicate with the world,
+  so I may not keep up with Twitter, Instagram, AND Facebook every day. However, feel free to reach out to me on 
+  any of these social media sites if you have any questions for me! My preferred method of communication in regards to training 
+  is email. To make it even easier for you, I have provided a short form below that you may use to send me a quick message.</p>
+ </div>
  
  
  <div class="emailform">
 	
-	<form action="#">
+	<form method="post" name="myemailform" action="form-to-email.php">
 	
 		<label for="name">Full Name</label>
-		<input type="text" id="name" name="fullname">
+		<input type="text" name="name">
 		
 		<label for="email_from">Email Address</label>
-		<input type="text" id="email" name="email_from">
+		<input type="text" name="email">
 		
 		<label for="reason">Reason for email</label>
-		<select id="reason" name="reason">
+		<select name="reason">
 			<option value="training">Interested in Personal Training</option>
 			<option value="price">Question about specific packages / pricing</option>
-			<option value="qa">Question about fitness / health and wellness</option>
+			<option value="qa">General question about fitness, health, and wellness</option>
 			<option value="other">Other</option>
 		</select>
 		
 		<label for="message">Message to Dylan Heiney</label>
-		<textarea id="message" name="email_message">Write your message here ...</textarea>
+		<textarea name="message">Write your message here ...</textarea>
 
 		
-		<input type="submit" value="Send Email">
+		<input type="submit" name="submit" value="Send Email">
 	</form>
 	
+ </div>
+ </div>
  </div>
   
   
